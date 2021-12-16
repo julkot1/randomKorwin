@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator wypowiedzi korwina</title>
+    <script>
+        const quotes = [
+            [
+                "Ależ to oczywiste że,",
+                "Uwaga",
+                "Proszę państwa",
+                "Dla wyjaśnienia moim wyborcom,",
+                "Jeśli więc zauważycie Państwo, że",
+                "Ja jestem liberałem więc, ",
+                "Nawet za Hitlera czy Stalina, "
+
+            ],
+            [
+                "każdy",
+                "nie tylko",
+                "jednak",
+                "obecnie",
+                "domniemany",
+                "nie ma dowodów, że"
+            ],
+            [
+                "faszyzm",
+                "eurosocjalizm",
+                "wolny rynek",
+                "homoś",
+                "tfu! demokracja",
+                "co drugi Żyd",
+                "Holokaust",
+                "dwóch meneli spod budki",
+                "faszyzujący Amerykanie – jak Barack Obama czy Hillary Clinton"
+
+            ],
+            [
+                "to sprawa prywatna",
+                "podobnie jak gatunek – ma swoje centrum, swój rdzeń",
+                "to III RP",
+                "ma liczne wady",
+                "jest koszmarnie głupi",
+                "od którego rzekomo wywodzą się małpy",
+                "jest co prawda lepszy od socjalizmu sowieckiego"
+            ],
+            [
+                "dlatego jestem seksistą oczywiście",
+                "dlatego w kraju rządzą konsumenci",
+                "dlatego nie zabił narodu żydowskiego",
+                "przez to jesteśmy coraz słabsi i coraz głupsi",
+                "jak przecież wiadomo głupich jest więcej niż mądrych",
+                "bo to ustrój, w którym rządzi durnota",
+                "to ludzie, którzy za pieniądze z zagranicy chcą rozbijać społeczeństwo"
+            ],
+            [
+                "a dzisiaj stoi nad nim urzędnik unijny",
+                "do widzenia",
+                "to jest pewne",
+                "a poza tym to za Hitlera",
+                "a UNIA EUROPEJSKA POWINNA ZOSTAĆ ZNISZCZONA",
+                "DLATEGO NIENAWIDZĘ SOCJALIZMU"
+            ]
+        ]
+        const create = ()=>{document.getElementById("quote").innerHTML=quotes.map(element => element[Math.floor(Math.random() * element.length)]).join(' ')};
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        *{
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #F9F3ED;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .2rem;
+            height: 20vh;
+        }
+        h1{
+            font-size: 3rem;
+            text-align: center;
+
+        }
+        #quote-section{
+            min-height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15%;
+        }
+        p{
+            font-size: 1.25rem;
+            text-align: center;
+        }
+        .button{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 30vh;
+        }
+        button{
+            border: none;
+            background-color: #10455B;
+            color: white;
+            padding: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: all 400ms ease-in-out;
+            transform: translateY(0);
+            box-shadow: 0px 0px 11px -1px transparent;
+        }
+        button:hover{
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 11px -1px rgba(66, 68, 90, 1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Generator wypowiedzi korwina</h1>
+    </nav>
+    <main>
+        <section id="quote-section">
+            <p id="quote"></p>
+        </section>
+        <section class="button">
+            <button onclick="create()">Tu klikać</button>
+        </section>
+    </main>
+</body>
+</html>
